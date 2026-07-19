@@ -94,8 +94,5 @@ def test_get(client: TestClient):
 
     response = client.get("/entries")
 
-    print(entry)
-
     assert response.status_code == 200
-    print(response.json())
     assert response.json() == [entry]
