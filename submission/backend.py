@@ -1,10 +1,10 @@
-import datetime
-import os
 from typing import Annotated
 
 from fastapi import Depends, FastAPI, Query, HTTPException
 from pydantic import BaseModel
 from sqlmodel import SQLModel, Field, create_engine, Session, select
+
+from datetime import datetime
 
 class Entry(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
@@ -26,14 +26,17 @@ def get_session():
     with Session(engine) as session:
         yield session
 
-
 @app.get("/health", status_code=200)
 def health():
     return "OK"
 
 @app.get("/entries")
-def get_entries(session: Annotated[Session, Depends(get_session)]) -> list[Entry]:
-    return [entry for entry in session.exec(select(Entry)).all()]
+def get_entries(session: Annotated[Session, Depends(get_session)]):
+    results = [entry for entry in session.exec(select(Entry)).all()]
+    def to_epoch(entry):
+        return datetime.fromisoformat(entry.iso_time).timestamp()
+    results.sort(key=to_epoch, reverse=True)
+    return results
 
 @app.get("/entries/{id}")
 def get_entry(id: int, session: Annotated[Session, Depends(get_session)]) -> Entry:
@@ -53,7 +56,7 @@ def post_entry(body: EntryCreate, session: Annotated[Session, Depends(get_sessio
     entry = Entry(
         title=body.title,
         body=body.body,
-        iso_time=datetime.datetime.now().replace(microsecond=0).isoformat(),
+        iso_time=datetime.now().replace(microsecond=0).isoformat(),
         lat=body.lat,
         lon=body.lon,
     )
