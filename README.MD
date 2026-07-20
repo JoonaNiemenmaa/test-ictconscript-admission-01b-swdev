@@ -6,6 +6,8 @@ The implementation is done with FastAPI and SQLModel. All project files can be f
 
 The app can be found deployed at https://ictconscript-01b-swdev-production.up.railway.app
 
+As this is a FastAPI application the API documentation can be accessed at https://ictconscript-01b-swdev-production.up.railway.app/docs
+
 ## Completed Requirements
 
 All functional requirements have been implemented.
