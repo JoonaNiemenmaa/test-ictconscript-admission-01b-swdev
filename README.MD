@@ -1,4 +1,4 @@
-## Software Development Backend API Task Submission
+# Software Development Backend API Task Submission
 
 This is my submission for the ICT-conscript admission test.
 
@@ -6,7 +6,7 @@ The implementation is done with FastAPI and SQLModel. All project files can be f
 
 The app can be found running at [https://ictconscript-01b-swdev-production.up.railway.app]
 
-# Completed Requirements
+## Completed Requirements
 
 All functional requirements have been implemented.
 
