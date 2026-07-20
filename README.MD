@@ -4,7 +4,7 @@ This is my submission for the ICT-conscript admission test.
 
 The implementation is done with FastAPI and SQLModel. All project files can be found in ./submission
 
-The app can be found running at [https://ictconscript-01b-swdev-production.up.railway.app]
+The app can be found deployed at https://ictconscript-01b-swdev-production.up.railway.app
 
 ## Completed Requirements
 
