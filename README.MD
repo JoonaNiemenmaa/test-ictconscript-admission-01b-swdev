@@ -38,5 +38,5 @@ All functional requirements have been implemented.
 
 | Idea | Hint |
 |------|------|
-| CI pipeline | GitHub Actions: build image, run tests, push to container/image repo of choice. |
-<!--- | Unit tests  | ≥ 2 tests (e.g. pytest, Jest, Go test) covering happy & error paths. | -->
+| Unit tests  | ≥ 2 tests (e.g. pytest, Jest, Go test) covering happy & error paths. |
+<!--- | CI pipeline | GitHub Actions: build image, run tests, push to container/image repo of choice. | -->
