@@ -8,6 +8,22 @@ The app can be found deployed at https://ictconscript-01b-swdev-production.up.ra
 
 As this is a FastAPI application the API documentation can be accessed at https://ictconscript-01b-swdev-production.up.railway.app/docs
 
+## Unit Tests
+
+The submission includes four unit tests as one of the stretch goals.
+
+Additional dependencies needed for the unit tests can be installed with ```submission/test_requirements.txt``` like so
+
+```sh
+$ pip install -r test_requirements.txt
+```
+
+And the tests can be run as follows
+
+```sh
+$ pytest tests.py
+```
+
 ## Completed Requirements
 
 All functional requirements have been implemented.
@@ -20,9 +36,7 @@ All functional requirements have been implemented.
 | B-4 | `POST /entries` accepts JSON:<br>  `title` (string ≤ 120),<br>  `body` (string),<br>  optional `lat`, `lon` (numbers).<br>The server assigns `id` and `isoTime`, inserts row, and returns it. |
 | B-5 | `GET /health` returns status 200, body `"OK"`. |
 
-The project includes four unit tests as one of the stretch goals. No CI pipeline has been implemented
-
 | Idea | Hint |
 |------|------|
-| Unit tests  | ≥ 2 tests (e.g. pytest, Jest, Go test) covering happy & error paths. |
+<!--- | Unit tests  | ≥ 2 tests (e.g. pytest, Jest, Go test) covering happy & error paths. | -->
 | CI pipeline | GitHub Actions: build image, run tests, push to container/image repo of choice. |
