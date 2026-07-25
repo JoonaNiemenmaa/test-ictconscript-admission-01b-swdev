@@ -24,7 +24,7 @@ jobs:
       id: push
       uses: docker/build-push-action@v4
       with:
-        file: ./submission/Dockerfile
+        context: ./submission
         push: true
         tags: panaani/logbook:latest
     
