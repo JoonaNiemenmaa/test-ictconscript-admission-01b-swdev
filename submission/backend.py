@@ -30,6 +30,10 @@ def get_session():
 def health():
     return "OK"
 
+@app.get("/hello", status_code=200)
+def hello():
+    return "hello to you my friendo"
+
 @app.get("/entries")
 def get_entries(session: Annotated[Session, Depends(get_session)]):
     results = [entry for entry in session.exec(select(Entry)).all()]
