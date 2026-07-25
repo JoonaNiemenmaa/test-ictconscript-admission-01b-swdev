@@ -27,6 +27,6 @@ jobs:
         context: ./submission
         file: ./Dockerfile
         push: true
-        tag: panaani/logbook:latest
+        tags: panaani/logbook:latest
     
     
