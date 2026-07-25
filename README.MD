@@ -2,11 +2,11 @@
 
 This is my submission for the ICT-conscript admission test.
 
-The implementation is done with FastAPI and SQLModel. All project files can be found in ./submission
+The implementation is done with FastAPI and SQLModel. All project files can be found in ```./submission```
 
-The app can be found deployed at https://ictconscript-01b-swdev-production.up.railway.app
+The app can be found deployed at https://logbook-production-347d.up.railway.app/
 
-As this is a FastAPI application the API documentation can be accessed at https://ictconscript-01b-swdev-production.up.railway.app/docs
+As this is a FastAPI application the API documentation can be accessed at https://logbook-production-347d.up.railway.app/docs
 
 ## Unit Tests
 
@@ -26,7 +26,7 @@ $ pytest tests.py
 
 ## Completed Requirements
 
-All functional requirements have been implemented.
+All functional requirements and stretch goals have been implemented.
 
 | ID | Requirement |
 |----|-------------|
@@ -39,4 +39,4 @@ All functional requirements have been implemented.
 | Idea | Hint |
 |------|------|
 | Unit tests  | ≥ 2 tests (e.g. pytest, Jest, Go test) covering happy & error paths. |
-<!--- | CI pipeline | GitHub Actions: build image, run tests, push to container/image repo of choice. | -->
+| CI pipeline | GitHub Actions: build image, run tests, push to container/image repo of choice. |
